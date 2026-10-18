@@ -7,12 +7,12 @@ p1 = [page_a(badge() + """
 <h1>2 concursos de <span class="c">TI</span> no <span class="v">Amazonas</span> pra ficar de olho</h1>
 <div class="card"><div class="k">TCE AM · autorizado</div><div class="t">Auditor de Controle Externo – TI</div><div class="d">Inicial de R$ 11.534,07 · vagas a definir</div></div>
 <div class="card"><div class="k">CGE AM · comissão formada</div><div class="t">Auditor de Controle Interno – TI</div><div class="d">5 vagas · R$ 13.700,00</div></div>
-""", src="Fonte: Estratégia Concursos (atualização de 09/09/2026). Sem edital publicado até o momento.")]
+""", photo="fotos/coding-noite-unsplash.jpg", src="Fonte: Estratégia Concursos (atualização de 09/09/2026). Sem edital publicado até o momento.")]
 
 # POST 2 — carrossel estilo A (17h): TI em tribunal
 T2 = 6
 p2 = [
- page_a(badge() + '<h1>Como é trabalhar com <span class="c">TI</span> em um <span class="v">tribunal</span>?</h1><div class="sub">O que ninguém te conta antes de escolher esse caminho →</div>', 1, T2),
+ page_a(badge() + '<h1>Como é trabalhar com <span class="c">TI</span> em um <span class="v">tribunal</span>?</h1><div class="sub">O que ninguém te conta antes de escolher esse caminho →</div>', 1, T2, photo="fotos/estudo-noite-canva.png"),
  page_a('<h2>Primeiro: <span class="c">não</span> é só "dar suporte"</h2><p>Tribunal é órgão com <b>muito sistema</b>: processo eletrônico, portais, bases de dados, integrações. Tudo isso precisa de gente de TI.</p>', 2, T2),
  page_a('<h2>As frentes de trabalho</h2><div class="card"><div class="t">Desenvolvimento</div><div class="d">sistemas internos e serviços pro cidadão</div></div><div class="card"><div class="t">Infra e cloud</div><div class="d">servidores, redes, alta disponibilidade</div></div><div class="card"><div class="t">Segurança e dados</div><div class="d">proteção da informação, LGPD, BI</div></div>', 3, T2),
  page_a('<h2>O que muda em relação à iniciativa privada</h2><p>Projetos de <b>longo prazo</b>, rotina mais previsível e a chance de construir carreira sem trocar de empresa a cada 2 anos.</p>', 4, T2),

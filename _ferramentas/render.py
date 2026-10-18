@@ -48,10 +48,21 @@ CODE_BG = """def estudar(edital):
     return aprovacao  # GPS"""
 
 
-def page_a(inner, idx=None, total=None, src=""):
+def _photo_layer(photo):
+    """photo: caminho local de um JPG/PNG (Canva ou Unsplash/Pexels). Fica escurecido com degradê para #14112B."""
+    ext = "png" if photo.lower().endswith(".png") else "jpeg"
+    b64 = base64.b64encode(open(photo, "rb").read()).decode()
+    return (f'<div style="position:absolute;inset:0;background:url(data:image/{ext};base64,{b64}) center/cover"></div>'
+            '<div style="position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,43,.25) 0%,'
+            'rgba(20,17,43,.55) 40%,rgba(20,17,43,.97) 72%)"></div>')
+
+
+def page_a(inner, idx=None, total=None, src="", photo=None):
+    """Estilo A. Com photo=caminho, usa a foto como fundo; sem photo, usa o fundo tech."""
     pill = f'<span class="pill">{idx}/{total}</span>' if total else '<span></span>'
+    bg = _photo_layer(photo) if photo else f'<div class="bg"></div><div class="code">{CODE_BG}</div><div class="fade"></div>'
     return f"""<html><head><style>{A_CSS}</style></head><body>
-<div class="bg"></div><div class="code">{CODE_BG}</div><div class="fade"></div>
+{bg}
 <div class="top"><span>@LUDY.DEV</span>{pill}</div>
 <div class="content">{inner}</div>
 {f'<div class="src">{src}</div>' if src else ''}
