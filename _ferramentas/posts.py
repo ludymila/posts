@@ -2,12 +2,16 @@ from render import *
 
 OUT = "/home/claude/posts/2026-10-18"
 
-# POST 1 — imagem única, estilo A (15h): concursos de TI no Amazonas
-p1 = [page_a(badge() + """
-<h1>2 concursos de <span class="c">TI</span> no <span class="v">Amazonas</span> pra ficar de olho</h1>
-<div class="card"><div class="k">TCE AM · autorizado</div><div class="t">Auditor de Controle Externo – TI</div><div class="d">Inicial de R$ 11.534,07 · vagas a definir</div></div>
-<div class="card"><div class="k">CGE AM · comissão formada</div><div class="t">Auditor de Controle Interno – TI</div><div class="d">5 vagas · R$ 13.700,00</div></div>
-""", photo="fotos/coding-noite-unsplash.jpg", src="Fonte: Estratégia Concursos (atualização de 09/09/2026). Sem edital publicado até o momento.")]
+# POST 1 — carrossel estilo A: concursos de TI no Amazonas (sem citar cursinhos concorrentes)
+T1 = 6
+p1 = [
+ page_a(badge() + '<h1>3 concursos no <span class="v">Amazonas</span> pra quem é de <span class="c">TI</span> ficar de olho</h1><div class="sub">Nenhum tem edital ainda. É por isso que você precisa ver isso agora →</div>', 1, T1, photo="fotos/coding-noite-unsplash.jpg"),
+ page_a('<h2><span class="c">TJ-AM</span> · concurso anunciado</h2><div class="card"><div class="k">O que já se sabe</div><div class="t">400 vagas previstas</div><div class="d">Analista e Assistente Judiciário · banca a definir</div></div><div class="card"><div class="k">E a TI?</div><div class="t">Área ainda não confirmada</div><div class="d">No último concurso (2019) houve vagas de informática e programação</div></div>', 2, T1, src="Fonte: Qconcursos (atualização de 17/06/2026)."),
+ page_a('<h2><span class="c">TCE-AM</span> · concurso autorizado</h2><div class="card"><div class="k">Cargo</div><div class="t">Auditor de Controle Externo – TI</div><div class="d">Vagas ainda a definir</div></div><div class="card"><div class="k">Remuneração inicial</div><div class="t">R$ 11.534,07</div></div>', 3, T1),
+ page_a('<h2><span class="c">CGE-AM</span> · comissão formada</h2><div class="card"><div class="k">Cargo</div><div class="t">Auditor de Controle Interno</div><div class="d">Até 50 vagas, sendo 5 para TI</div></div><div class="card"><div class="k">Remuneração</div><div class="t">R$ 13.700,00</div><div class="d">Banca ainda não definida</div></div>', 4, T1, src="Fonte: JC Concursos (atualização de 18/09/2026)."),
+ page_a('<h2>Sem edital = <span class="v">vantagem</span> pra quem começa agora</h2><p>Quando o edital sai, o prazo até a prova costuma ser curto. Quem já tem a base de TI, português e legislação <b>só ajusta a rota</b>.</p>', 5, T1),
+ page_a('<h2>Quer um <span class="c">plano</span> pra chegar pronta(o)?</h2><p>É pra isso que existe o método <b>GPS</b>. Comenta <b class="c">NORTE</b> que eu te mando o link do meu grupo no WhatsApp.</p>', 6, T1),
+]
 
 # POST 2 — carrossel estilo A (17h): TI em tribunal
 T2 = 6
