@@ -57,10 +57,20 @@ def _photo_layer(photo):
             'rgba(20,17,43,.55) 40%,rgba(20,17,43,.97) 72%)"></div>')
 
 
-def page_a(inner, idx=None, total=None, src="", photo=None):
-    """Estilo A. Com photo=caminho, usa a foto como fundo; sem photo, usa o fundo tech."""
+def page_a(inner, idx=None, total=None, src="", photo=None, top_photo=None):
+    """Estilo A. photo=caminho: foto como fundo inteiro (capas). top_photo=caminho: foto no topo do slide
+    (ex.: prédio do órgão), com o conteúdo embaixo. Sem nenhum dos dois: fundo tech."""
     pill = f'<span class="pill">{idx}/{total}</span>' if total else '<span></span>'
-    bg = _photo_layer(photo) if photo else f'<div class="bg"></div><div class="code">{CODE_BG}</div><div class="fade"></div>'
+    if photo:
+        bg = _photo_layer(photo)
+    elif top_photo:
+        ext = "png" if top_photo.lower().endswith(".png") else "jpeg"
+        b64 = base64.b64encode(open(top_photo, "rb").read()).decode()
+        bg = ('<div class="bg"></div>'
+              f'<div style="position:absolute;left:0;right:0;top:0;height:640px;background:url(data:image/{ext};base64,{b64}) center/cover"></div>'
+              '<div style="position:absolute;left:0;right:0;top:0;height:640px;background:linear-gradient(180deg,rgba(20,17,43,.45) 0%,rgba(20,17,43,.1) 35%,#14112B 100%)"></div>')
+    else:
+        bg = f'<div class="bg"></div><div class="code">{CODE_BG}</div><div class="fade"></div>'
     return f"""<html><head><style>{A_CSS}</style></head><body>
 {bg}
 <div class="top"><span>@LUDY.DEV</span>{pill}</div>
