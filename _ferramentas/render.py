@@ -24,7 +24,8 @@ body{background:#14112B;color:#F6F5FB;position:relative}
 .fade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,17,43,0) 30%,rgba(20,17,43,.95) 75%)}
 .code{position:absolute;top:150px;left:80px;right:80px;font-family:'DejaVu Sans Mono',monospace;font-size:26px;line-height:1.7;color:rgba(246,245,251,.16);white-space:pre}
 .top{position:absolute;top:56px;left:80px;right:80px;display:flex;justify-content:space-between;font-size:24px;letter-spacing:3px;font-weight:600;color:rgba(246,245,251,.7)}
-.pill{background:rgba(246,245,251,.12);border-radius:40px;padding:8px 22px;letter-spacing:1px}
+.pill{background:rgba(20,17,43,.55);border-radius:40px;padding:8px 22px;letter-spacing:1px}
+.top span:first-child{background:rgba(20,17,43,.55);border-radius:40px;padding:8px 22px}
 .content{position:absolute;left:80px;right:80px;bottom:110px}
 .badge{display:inline-flex;align-items:center;gap:14px;background:rgba(246,245,251,.1);border:1px solid rgba(246,245,251,.2);border-radius:40px;padding:10px 24px 10px 10px;font-size:26px;font-weight:600;margin-bottom:36px}
 .badge img{width:48px;height:48px;border-radius:50%}
@@ -67,8 +68,8 @@ def page_a(inner, idx=None, total=None, src="", photo=None, top_photo=None):
         ext = "png" if top_photo.lower().endswith(".png") else "jpeg"
         b64 = base64.b64encode(open(top_photo, "rb").read()).decode()
         bg = ('<div class="bg"></div>'
-              f'<div style="position:absolute;left:0;right:0;top:0;height:640px;background:url(data:image/{ext};base64,{b64}) center/cover"></div>'
-              '<div style="position:absolute;left:0;right:0;top:0;height:640px;background:linear-gradient(180deg,rgba(20,17,43,.45) 0%,rgba(20,17,43,.1) 35%,#14112B 100%)"></div>')
+              f'<div style="position:absolute;left:0;right:0;top:0;height:470px;background:url(data:image/{ext};base64,{b64}) center/cover"></div>'
+              '<div style="position:absolute;left:0;right:0;top:0;height:470px;background:linear-gradient(180deg,rgba(20,17,43,.6) 0%,rgba(20,17,43,0) 22%,rgba(20,17,43,0) 70%,#14112B 100%)"></div>')
     else:
         bg = f'<div class="bg"></div><div class="code">{CODE_BG}</div><div class="fade"></div>'
     return f"""<html><head><style>{A_CSS}</style></head><body>
