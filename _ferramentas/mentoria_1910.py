@@ -31,6 +31,15 @@ p3 = [page_a(badge() + """
 <div class="sub">Comenta <b style="color:#22D3B6">GPS</b> e entra no grupo agora para receber o link.</div>
 """, photo="fotos/ludy-sentada-azul.jpg")]
 
+# POST 4 — 9h (Brasília) · imagem única · estilo A (foto da Ludy): aviso de data e horário da live
+p4 = [page_a(badge() + """
+<h1>Hoje tem <span class="c">live</span></h1>
+<div class="card"><div class="k">Segunda-feira, 19/10</div><div class="t">20h · horário de Brasília</div>
+<div class="d">Exclusiva para o grupo VIP · as 3 coisas que mais atrasam a aprovação, dicas de estudo e tudo sobre a Mentoria Individual GPS</div></div>
+<div class="sub">Comenta <b style="color:#22D3B6">GPS</b> e entra no grupo para receber o link.</div>
+""", photo="fotos/ludy-bracos-cruzados-clara.jpg")]
+
+render(p4, OUT + "/post-4")
 render(p1, OUT + "/post-1")
 render(p2, OUT + "/post-2")
 render(p3, OUT + "/post-3")
