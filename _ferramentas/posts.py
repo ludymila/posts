@@ -13,15 +13,17 @@ p1 = [
  page_a('<h2>Quer um <span class="c">plano</span> pra chegar pronta(o)?</h2><p>É pra isso que existe o método <b>GPS</b>. Comenta <b class="c">NORTE</b> que eu te mando o link do meu grupo no WhatsApp.</p>', 6, T1),
 ]
 
-# POST 2 — carrossel estilo A (17h): TI em tribunal
+# POST 2 — carrossel estilo A: áreas de atuação de TI em um tribunal (agendado para 21/10)
+def area(icon, nome, desc):
+    return f'<div class="card"><div class="k">{icon} {nome}</div><div class="d" style="font-size:31px;color:rgba(246,245,251,.9)">{desc}</div></div>'
 T2 = 6
 p2 = [
- page_a(badge() + '<h1>Como é trabalhar com <span class="c">TI</span> em um <span class="v">tribunal</span>?</h1><div class="sub">O que ninguém te conta antes de escolher esse caminho →</div>', 1, T2, photo="fotos/estudo-noite-canva.png"),
- page_a('<h2>Primeiro: <span class="c">não</span> é só "dar suporte"</h2><p>Tribunal é órgão com <b>muito sistema</b>: processo eletrônico, portais, bases de dados, integrações. Tudo isso precisa de gente de TI.</p>', 2, T2),
- page_a('<h2>As frentes de trabalho</h2><div class="card"><div class="t">Desenvolvimento</div><div class="d">sistemas internos e serviços pro cidadão</div></div><div class="card"><div class="t">Infra e cloud</div><div class="d">servidores, redes, alta disponibilidade</div></div><div class="card"><div class="t">Segurança e dados</div><div class="d">proteção da informação, LGPD, BI</div></div>', 3, T2),
- page_a('<h2>O que muda em relação à iniciativa privada</h2><p>Projetos de <b>longo prazo</b>, rotina mais previsível e a chance de construir carreira sem trocar de empresa a cada 2 anos.</p>', 4, T2),
- page_a('<h2>O que <span class="v">não</span> muda</h2><p>Você continua estudando tecnologia: IA, nuvem, segurança, arquitetura. Os editais cobram isso, e o dia a dia também.</p>', 5, T2),
- page_a('<h2>Quer seguir esse caminho com um <span class="c">plano</span>?</h2><p>Foi o método <b>GPS</b> que me levou até aqui. Comenta <b class="c">TRIBUNAL</b> que eu te mando o link do meu grupo no WhatsApp.</p>', 6, T2),
+ page_a(badge() + '<h1>Onde trabalha quem é de <span class="c">TI</span> em um <span class="v">tribunal</span>?</h1><div class="sub">Não é só suporte. Conheça as áreas de atuação →</div>', 1, T2, photo="fotos/estudo-noite-canva.png"),
+ page_a('<h2>Áreas de atuação <span class="c">(1/4)</span></h2>' + area("🛠️","Suporte de TI","Atende servidores e magistrados no dia a dia: equipamentos, acessos, sistemas e incidentes.") + area("📋","Gerenciamento de projetos","Planeja e acompanha projetos de tecnologia: prazos, custos, riscos e entregas.") , 2, T2),
+ page_a('<h2>Áreas de atuação <span class="c">(2/4)</span></h2>' + area("🧭","Governança de TI","Alinha a tecnologia aos objetivos do órgão: planejamento, contratações, políticas e indicadores.") + area("🔐","Segurança da informação","Protege dados e sistemas: gestão de riscos, controle de acessos, resposta a incidentes e LGPD.") , 3, T2),
+ page_a('<h2>Áreas de atuação <span class="c">(3/4)</span></h2>' + area("🌐","Redes e infraestrutura","Mantém servidores, redes, data center e nuvem funcionando com alta disponibilidade.") + area("💻","Desenvolvimento de sistemas","Cria e mantém os sistemas usados pelo órgão e pelos cidadãos.") , 4, T2),
+ page_a('<h2>Áreas de atuação <span class="c">(4/4)</span></h2>' + area("🧪","Testes de software","Garante a qualidade dos sistemas antes de chegarem ao usuário, com testes manuais e automatizados.") + area("📝","Análise de requisitos","Entende a necessidade das áreas e transforma em requisitos claros para o time de desenvolvimento.") , 5, T2),
+ page_a('<h2>Qual dessas áreas é a <span class="c">sua cara</span>?</h2><p>Me conta nos comentários.</p><div class="card"><div class="t">Me siga para mais dicas de concursos e carreira de TI.</div></div>', 6, T2),
 ]
 
 # POST 3 — carrossel estilo B tweet (19h): 5 erros
@@ -33,7 +35,7 @@ p3 = [
  page_b('<span class="tag">ERRO 3</span><h2>Ignorar a banca</h2><p>Cada banca tem um estilo. Certo/errado é um jogo, múltipla escolha é outro. Treine no formato da sua prova.</p>', 4, T3),
  page_b('<span class="tag">ERRO 4</span><h2>Deixar as matérias "de fora da TI" pro final</h2><p>Português e legislação eliminam muita gente boa em TI. Elas entram no ciclo desde o primeiro dia.</p>', 5, T3),
  page_b('<span class="tag">ERRO 5</span><h2>Não revisar</h2><p>Sem revisão programada, você estuda o mesmo assunto três vezes do zero. Revisão é o que transforma hora estudada em ponto.</p>', 6, T3),
- page_b('<h2>Estudar muito não é o mesmo que estudar <span class="v">na direção certa</span>.</h2><div class="box">É isso que o método <b>GPS</b> resolve.<br>Comenta <b>GPS</b> que eu te mando o link do meu grupo no WhatsApp.</div>', 7, T3),
+ page_b('<h2>Estudar muito não é o mesmo que estudar <span class="v">na direção certa</span>.</h2><div class="box">Me siga para mais dicas de <b>concursos</b> e <b>carreira de TI</b>.</div>', 7, T3),
 ]
 
 render(p1, OUT + "/post-1")

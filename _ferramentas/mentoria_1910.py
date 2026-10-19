@@ -34,8 +34,9 @@ p3 = [page_a(badge() + """
 # POST 4 — 9h (Brasília) · imagem única · estilo A (foto da Ludy): aviso de data e horário da live
 p4 = [page_a(badge() + """
 <h1>Hoje tem <span class="c">live</span></h1>
-<div class="card"><div class="k">Segunda-feira, 19/10</div><div class="t">20h · horário de Brasília</div>
-<div class="d">Exclusiva para o grupo VIP · as 3 coisas que mais atrasam a aprovação, dicas de estudo e tudo sobre a Mentoria Individual GPS</div></div>
+<div style="font-family:'Inter Display';font-weight:800;font-size:46px;line-height:1.15;color:#22D3B6;margin:26px 0 6px">As 3 coisas que mais atrasam sua aprovação em concurso</div>
+<div class="card"><div class="k">Segunda-feira, 19/10 · 20h, horário de Brasília</div>
+<div class="d">Apenas para o grupo VIP. Dicas de estudo e tudo sobre a Mentoria Individual com o método GPS.</div></div>
 <div class="sub">Comenta <b style="color:#22D3B6">GPS</b> e entra no grupo para receber o link.</div>
 """, photo="fotos/ludy-bracos-cruzados-clara.jpg")]
 
