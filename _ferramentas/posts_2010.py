@@ -17,8 +17,8 @@ T2 = 5
 p2 = [
  page_b('<h1>O salário não é tudo: os <span class="v">auxílios</span> de quem trabalha no Judiciário federal.</h1><div class="lead">Valores de referência do Poder Judiciário da União (TRTs, TREs, TST etc.) →</div>', 1, T2),
  page_b('<span class="tag">AUXÍLIO-ALIMENTAÇÃO</span><h2>R$ 1.860,51 por mês</h2><p>Pago a todos os servidores, independentemente do cargo.</p>', 2, T2),
- page_b('<span class="tag">ADICIONAL DE QUALIFICAÇÃO</span><h2>Estudar vira aumento de salário</h2><p>🎓 Duas pós-graduações: <b>R$ 1.428,80</b> por mês</p><p>📚 Cursos de capacitação (treinamento): <b>R$ 428,64</b> por mês</p><p>Mestrado e doutorado rendem <span class="hl">percentuais ainda maiores</span>.</p>', 3, T2),
- page_b('<span class="tag">AUXÍLIO-SAÚDE</span><h2>Até R$ 900,00 por mês</h2><p>Ajuda no custo do plano de saúde. E ainda existe o <b>auxílio-creche</b> para quem tem filhos pequenos.</p>', 4, T2),
+ page_b('<span class="tag">ADICIONAL DE QUALIFICAÇÃO</span><h2 style="margin-bottom:28px">Estudar vira aumento de salário</h2><p>🎓 Duas pós-graduações: <b>R$ 1.428,80</b> por mês</p><p>📚 Cursos de capacitação (treinamento): <b>R$ 428,64</b> por mês</p><p>🎓 Mestrado: <b>R$ 2.700,43</b> por mês</p><p>🎓 Doutorado: <b>R$ 3.857,76</b> por mês</p>', 3, T2),
+ page_b('<span class="tag">AUXÍLIO-SAÚDE</span><h2>Até R$ 900,00 por mês</h2><p>Ajuda no custo do plano de saúde.</p><span class="tag" style="margin-top:30px">AUXÍLIO-CRECHE</span><h2>R$ 1.288,47 por mês</h2><p>Por filho pequeno, como assistência pré-escolar.</p>', 4, T2),
  page_b('<h2>Somando só esses itens:</h2><div class="box"><b>R$ 4.617,95 por mês</b> além do vencimento, no exemplo de um analista com 2 pós.<br><br>Me siga para mais dicas de concursos e carreira de TI.</div>', 5, T2),
 ]
 
