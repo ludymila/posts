@@ -22,6 +22,17 @@ p2 = [
  page_b('<h2>Somando só esses itens:</h2><div class="box"><b>R$ 4.617,95 por mês</b> além do vencimento, no exemplo de um analista com 2 pós.<br><br>Me siga para mais dicas de concursos e carreira de TI.</div>', 5, T2),
 ]
 
+# POST 3 — 13h (Brasília) · imagem única · estilo A: TJ-PB inscrições abertas (substitui o TCE-GO nesse horário)
+p3 = [page_a(badge() + """
+<h1>Inscrições abertas: <span class="c">TJ-PB</span> com <span class="v">20 vagas de TI</span></h1>
+<div class="card"><div class="k">Analista Judiciário · TI</div>
+<div class="t">Inicial: R$ 11.526,14 · Final: R$ 19.212,35</div>
+<div class="d">Vencimento + auxílio-alimentação + auxílio-saúde</div></div>
+<div class="card"><div class="k">Prazos</div>
+<div class="d">Inscrições de 20/10 a 18/11/2026 · prova em 24/01/2027<br>Banca FGV</div></div>
+""", photo="fotos/tjpb-sede.jpg")]
+
+render(p3, OUT + "/post-3")
 render(p1, OUT + "/post-1")
 render(p2, OUT + "/post-2")
 print("ok")
