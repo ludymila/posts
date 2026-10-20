@@ -58,7 +58,7 @@ def _photo_layer(photo):
             'rgba(20,17,43,.55) 40%,rgba(20,17,43,.97) 72%)"></div>')
 
 
-def page_a(inner, idx=None, total=None, src="", photo=None, top_photo=None):
+def page_a(inner, idx=None, total=None, src="", photo=None, top_photo=None, top_h=470):
     """Estilo A. photo=caminho: foto como fundo inteiro (capas). top_photo=caminho: foto no topo do slide
     (ex.: prédio do órgão), com o conteúdo embaixo. Sem nenhum dos dois: fundo tech."""
     pill = f'<span class="pill">{idx}/{total}</span>' if total else '<span></span>'
@@ -68,8 +68,8 @@ def page_a(inner, idx=None, total=None, src="", photo=None, top_photo=None):
         ext = "png" if top_photo.lower().endswith(".png") else "jpeg"
         b64 = base64.b64encode(open(top_photo, "rb").read()).decode()
         bg = ('<div class="bg"></div>'
-              f'<div style="position:absolute;left:0;right:0;top:0;height:470px;background:url(data:image/{ext};base64,{b64}) center/cover"></div>'
-              '<div style="position:absolute;left:0;right:0;top:0;height:470px;background:linear-gradient(180deg,rgba(20,17,43,.6) 0%,rgba(20,17,43,0) 22%,rgba(20,17,43,0) 70%,#14112B 100%)"></div>')
+              f'<div style="position:absolute;left:0;right:0;top:0;height:{top_h}px;background:url(data:image/{ext};base64,{b64}) center/cover"></div>'
+              f'<div style="position:absolute;left:0;right:0;top:0;height:{top_h}px;background:linear-gradient(180deg,rgba(20,17,43,.6) 0%,rgba(20,17,43,0) 22%,rgba(20,17,43,0) 70%,#14112B 100%)"></div>')
     else:
         bg = f'<div class="bg"></div><div class="code">{CODE_BG}</div><div class="fade"></div>'
     return f"""<html><head><style>{A_CSS}</style></head><body>
