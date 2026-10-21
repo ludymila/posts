@@ -15,7 +15,7 @@ AREAS = [
 ]
 T = len(AREAS) + 2
 p1 = [page_a(badge() + '<h1>Como é o trabalho de quem é de <span class="c">TI</span> em um <span class="v">tribunal</span>?</h1>'
-             '<div class="sub">Não é só com programação. Conheça as 8 áreas de atuação →</div>', 1, T, photo="fotos/ludy-fachada-tribunal.jpg")]
+             '<div class="sub">Não é só com programação. Conheça as 8 áreas de atuação&nbsp;→</div>', 1, T, photo="fotos/ludy-trabalho-tribunal.jpg", panel=True)]
 for i, (icon, nome, desc, f) in enumerate(AREAS, 2):
     p1.append(page_a(f'<span style="font-size:26px;letter-spacing:2px;color:#22D3B6;font-weight:700">ÁREA {i-1} DE 8</span>'
                      f'<h2 style="margin-top:14px">{icon} {nome}</h2><p>{desc}</p>', i, T, top_photo=f"fotos/areas/{f}.jpg", top_h=800))

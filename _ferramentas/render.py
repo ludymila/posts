@@ -27,6 +27,10 @@ body{background:#14112B;color:#F6F5FB;position:relative}
 .pill{background:rgba(20,17,43,.55);border-radius:40px;padding:8px 22px;letter-spacing:1px}
 .top span:first-child{background:rgba(20,17,43,.55);border-radius:40px;padding:8px 22px}
 .content{position:absolute;left:80px;right:80px;bottom:110px}
+.panel{position:absolute;left:0;right:0;bottom:0;background:#14112B;padding:44px 80px 70px}
+.panel h1{font-size:76px}
+.panel .badge{margin-bottom:26px}
+.panel .sub{margin-top:22px;font-size:30px}
 .badge{display:inline-flex;align-items:center;gap:14px;background:rgba(246,245,251,.1);border:1px solid rgba(246,245,251,.2);border-radius:40px;padding:10px 24px 10px 10px;font-size:26px;font-weight:600;margin-bottom:36px}
 .badge img{width:48px;height:48px;border-radius:50%}
 h1{font-family:'Inter Display','Inter',sans-serif;font-weight:900;text-transform:uppercase;font-size:92px;line-height:.98;letter-spacing:-2px}
@@ -65,11 +69,17 @@ MINIMAL_BG = ('<div style="position:absolute;inset:0;background:#14112B"></div>'
   '<circle cx="257" cy="302" r="9" fill="#22D3B6"/></svg>')
 
 
-def page_a(inner, idx=None, total=None, src="", photo=None, top_photo=None, top_h=470, minimal=False):
+def page_a(inner, idx=None, total=None, src="", photo=None, top_photo=None, top_h=470, minimal=False, panel=False):
     """Estilo A. photo=caminho: foto como fundo inteiro (capas). top_photo=caminho: foto no topo do slide
     (ex.: prédio do órgão), com o conteúdo embaixo. Sem nenhum dos dois: fundo tech."""
     pill = f'<span class="pill">{idx}/{total}</span>' if total else '<span></span>'
-    if minimal:
+    if panel and photo:
+        # foto sem escurecer + bloco sólido embaixo com o texto
+        ext = "png" if photo.lower().endswith(".png") else "jpeg"
+        b64 = base64.b64encode(open(photo, "rb").read()).decode()
+        bg = f'<div style="position:absolute;inset:0;background:url(data:image/{ext};base64,{b64}) center top/cover"></div>'
+        inner = f'<div class="panel">{inner}</div>'
+    elif minimal:
         bg = MINIMAL_BG
     elif photo:
         bg = _photo_layer(photo)
@@ -84,7 +94,7 @@ def page_a(inner, idx=None, total=None, src="", photo=None, top_photo=None, top_
     return f"""<html><head><style>{A_CSS}</style></head><body>
 {bg}
 <div class="top"><span>@LUDY.DEV</span>{pill}</div>
-<div class="content">{inner}</div>
+{inner if panel and photo else f'<div class="content">{inner}</div>'}
 {f'<div class="src">{src}</div>' if src else ''}
 </body></html>"""
 
