@@ -58,11 +58,20 @@ def _photo_layer(photo):
             'rgba(20,17,43,.55) 40%,rgba(20,17,43,.97) 72%)"></div>')
 
 
-def page_a(inner, idx=None, total=None, src="", photo=None, top_photo=None, top_h=470):
+MINIMAL_BG = ('<div style="position:absolute;inset:0;background:#14112B"></div>'
+  '<svg style="position:absolute;top:0;right:0" width="560" height="560" viewBox="0 0 560 560" fill="none">'
+  '<circle cx="470" cy="90" r="300" stroke="#6C4CF1" stroke-opacity=".55" stroke-width="2"/>'
+  '<circle cx="470" cy="90" r="200" stroke="#6C4CF1" stroke-opacity=".3" stroke-width="2"/>'
+  '<circle cx="257" cy="302" r="9" fill="#22D3B6"/></svg>')
+
+
+def page_a(inner, idx=None, total=None, src="", photo=None, top_photo=None, top_h=470, minimal=False):
     """Estilo A. photo=caminho: foto como fundo inteiro (capas). top_photo=caminho: foto no topo do slide
     (ex.: prédio do órgão), com o conteúdo embaixo. Sem nenhum dos dois: fundo tech."""
     pill = f'<span class="pill">{idx}/{total}</span>' if total else '<span></span>'
-    if photo:
+    if minimal:
+        bg = MINIMAL_BG
+    elif photo:
         bg = _photo_layer(photo)
     elif top_photo:
         ext = "png" if top_photo.lower().endswith(".png") else "jpeg"
