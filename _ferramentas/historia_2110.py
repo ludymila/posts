@@ -171,7 +171,7 @@ SLIDES = [
  ("Então não se limite.\n\nNem pela **idade,** pra mais ou pra menos. Nem pelo **número de vagas.** Nem pela **sua colocação.**\n\nQuem continua estudando chega mais longe do que imaginava.",
   46, [(P+'eua-nasa.jpg', 0.5, 0.86, False)], 500),
  # 11 CTA
- ("Se essa história te deu um gás, salva pra reler no dia em que bater a vontade de desistir.\n\nE manda pra aquele amigo que acha que \"não tem chance\".\n\n**Comenta GPS** que eu te mando o link do meu grupo no WhatsApp.",
+ ("Se essa história te deu um gás, salva pra reler no dia em que bater a vontade de desistir.\n\nE manda pra aquele amigo que acha que \"não tem chance\".\n\nE já segue **@ludy.dev** para mais dicas de Concursos de TI.",
   50, None, 0),
 ]
 
