@@ -19,8 +19,11 @@ p1 = [page_a(badge() + '<h1>Como é o trabalho de quem é de <span class="c">TI<
 for i, (icon, nome, desc, f) in enumerate(AREAS, 2):
     p1.append(page_a(f'<span style="font-size:26px;letter-spacing:2px;color:#22D3B6;font-weight:700">ÁREA {i-1} DE 8</span>'
                      f'<h2 style="margin-top:14px">{icon} {nome}</h2><p>{desc}</p>', i, T, top_photo=f"fotos/areas/{f}.jpg", top_h=800))
-p1.append(page_a('<h2>Qual dessas áreas é a <span class="c">sua cara</span>?</h2><p>Me conta nos comentários.</p>'
+LAST = ('<h2>Comenta o <span class="c">número</span> da área que mais te interessa <span class="v">(1 a 8)</span>!</h2>'
+        '<p>Se estiver em dúvida, me conta que eu te ajudo a escolher. 🚀</p>'
+        '<p style="margin-top:28px">Vamos ver qual a área mais interessante 👀</p>')
+p1.append(page_a(LAST +
                  '<div class="card"><div class="t">Me siga para mais dicas de concursos e carreira de TI.</div></div>', T, T))
 
-render(p1, OUT + "/post-1")
+render(p1, OUT + "/post-1")  # atenção: slide_01 foi substituído pela capa do Canva; renderize só o que mudar
 print("ok")
