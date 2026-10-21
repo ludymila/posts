@@ -14,7 +14,7 @@ POSTS = {}
 # 1 — 21/10 18h · panorama inscrições abertas
 T = 8
 POSTS["21-18h"] = [
- page_a(badge() + '<h1><span class="c">5 concursos</span> de TI com inscrições abertas <span class="v">agora</span></h1><div class="sub">Do prazo mais curto ao mais longo. Arrasta →</div>', 1, T, minimal=True),
+ page_a(badge() + '<h1><span class="c">5 concursos</span> de TI com inscrições abertas <span class="v">agora</span></h1><div class="sub">Do prazo mais curto ao mais longo. Arrasta →</div>', 1, T, photo="fotos/gabarito-caneta-unsplash.jpg", panel=True),
  page_a('<h2><span class="c">SEFAZ SP</span> · fecha 03/11</h2>' + card("Cargo", "APOFP · Ciência de Dados e TI", "20 vagas · qualquer graduação") + card("Remuneração", "Inicial: R$ 11.359,50", "Final de carreira: R$ 18 mil a R$ 20 mil") + card("Banca e prova", "FCC · 13/12/2026", "Em São Paulo (SP)"), 2, T, minimal=True),
  page_a('<h2><span class="c">CGU</span> · fecha 04/11</h2>' + card("Cargo", "Auditor Federal de Finanças e Controle · TI", "30 vagas · qualquer graduação") + card("Remuneração", "Inicial: R$ 20.000,00", "Final de carreira: R$ 36.694,00") + card("Banca e prova", "Cebraspe · 13/12/2026", "Nas 27 capitais"), 3, T, minimal=True),
  page_a('<h2><span class="c">TRT 8</span> · fecha 05/11</h2>' + card("Analista Judiciário · TI", "Inicial: R$ 18.801,39", "Final de carreira: R$ 26.845,74") + card("Técnico Judiciário · TI", "Inicial: R$ 12.537,22", "Final de carreira: R$ 17.440,22") + card("Banca e prova", "FCC · 17/01/2027", "Belém, Marabá, Santarém e Macapá"), 4, T, minimal=True),
