@@ -12,16 +12,19 @@ def seguir(extra=""):
 POSTS = {}
 
 # 1 — 21/10 18h · panorama inscrições abertas
-T = 8
+T = 9
+NOVO = ('<span style="display:inline-block;background:#6C4CF1;color:#F6F5FB;font-weight:800;font-size:26px;'
+        'letter-spacing:2px;border-radius:14px;padding:8px 20px;margin-bottom:26px">EDITAL NOVO · SAIU EM 22/10</span>')
 POSTS["21-18h"] = [
- page_a(badge() + '<h1><span class="c">5 concursos</span> de TI com inscrições abertas <span class="v">agora</span></h1><div class="sub">Do prazo mais curto ao mais longo. Arrasta →</div>', 1, T, photo="fotos/gabarito-caneta-unsplash.jpg", panel=True),
- page_a('<h2><span class="c">SEFAZ SP</span> · fecha 03/11</h2>' + card("Cargo", "APOFP · Ciência de Dados e TI", "20 vagas · qualquer graduação") + card("Remuneração", "Inicial: R$ 11.359,50", "Final de carreira: R$ 18 mil a R$ 20 mil") + card("Banca e prova", "FCC · 13/12/2026", "Em São Paulo (SP)"), 2, T, minimal=True),
- page_a('<h2><span class="c">CGU</span> · fecha 04/11</h2>' + card("Cargo", "Auditor Federal de Finanças e Controle · TI", "30 vagas · qualquer graduação") + card("Remuneração", "Inicial: R$ 20.000,00", "Final de carreira: R$ 36.694,00") + card("Banca e prova", "Cebraspe · 13/12/2026", "Nas 27 capitais"), 3, T, minimal=True),
- page_a('<h2><span class="c">TRT 8</span> · fecha 05/11</h2>' + card("Analista Judiciário · TI", "Inicial: R$ 18.801,39", "Final de carreira: R$ 26.845,74") + card("Técnico Judiciário · TI", "Inicial: R$ 12.537,22", "Final de carreira: R$ 17.440,22") + card("Banca e prova", "FCC · 17/01/2027", "Belém, Marabá, Santarém e Macapá"), 4, T, minimal=True),
- page_a('<h2><span class="c">TCE-GO</span> · fecha 06/11</h2>' + card("Cargo", "Técnico de Controle Externo · TI", "10 vagas · nível médio") + card("Remuneração", "Inicial: R$ 11.862,19", "Final de carreira: ainda não divulgado") + card("Banca e prova", "FCC · 17/01/2027", "Em Goiânia (GO)"), 5, T, minimal=True),
- page_a('<h2><span class="c">TJ-PB</span> · fecha 18/11</h2>' + card("Cargo", "Analista Judiciário · TI", "20 vagas") + card("Remuneração", "Inicial: R$ 11.526,14", "Final de carreira: R$ 19.212,35") + card("Banca e prova", "FGV · 24/01/2027", "Na Paraíba"), 6, T, minimal=True),
- page_a('<h2>Dá pra fazer <span class="v">mais de um</span>?</h2><p>Sim. CGU e SEFAZ SP caem no <b>mesmo dia (13/12)</b>, então ali é escolher um. Já TRT 8, TCE-GO e TJ-PB ficam em janeiro.</p><p class="sub">Aproveite que TRT-8 (PA e AP), TCE-GO e SEFAZ-SP são da mesma banca (FCC).</p>', 7, T, minimal=True),
- page_a('<h2>Salva pra não perder os <span class="c">prazos</span>.</h2><p>E manda pra aquele amigo de TI que vive dizendo que um dia vai estudar pra concurso.</p>' + seguir(), 8, T, minimal=True),
+ page_a(badge() + '<h1><span class="c">5 concursos</span> de TI com inscrições abertas <span class="v">agora</span></h1><div class="sub">+ bônus: o edital do TRT-4 acabou de sair. Arrasta →</div>', 1, T, photo="fotos/gabarito-caneta-unsplash.jpg", panel=True),
+ page_a(NOVO + '<h2><span class="c">TRT-4 (RS)</span> · abre 26/10</h2>' + card("Inscrições", "26/10 a 25/11", "Cadastro reserva · FCC") + card("Analista Judiciário · TI", "Inicial: R$ 16.040,88", "Superior em Informática (ou outra graduação + pós em Informática)") + card("Técnico Judiciário · TI", "Inicial: R$ 9.776,71", "Nível superior + qualificação em TI prevista no edital") + card("Prova", "31/01/2027", "Em Porto Alegre (RS)"), 2, T, minimal=True),
+ page_a('<h2><span class="c">SEFAZ SP</span> · fecha 03/11</h2>' + card("Cargo", "APOFP · Ciência de Dados e TI", "20 vagas · qualquer graduação") + card("Remuneração", "Inicial: R$ 11.359,50", "Final de carreira: R$ 18 mil a R$ 20 mil") + card("Banca e prova", "FCC · 13/12/2026", "Em São Paulo (SP)"), 3, T, minimal=True),
+ page_a('<h2><span class="c">CGU</span> · fecha 04/11</h2>' + card("Cargo", "Auditor Federal de Finanças e Controle · TI", "30 vagas · qualquer graduação") + card("Remuneração", "Inicial: R$ 20.000,00", "Final de carreira: R$ 36.694,00") + card("Banca e prova", "Cebraspe · 13/12/2026", "Nas 27 capitais"), 4, T, minimal=True),
+ page_a('<h2><span class="c">TRT 8</span> · fecha 05/11</h2>' + card("Analista Judiciário · TI", "Inicial: R$ 18.801,39", "Final de carreira: R$ 26.845,74") + card("Técnico Judiciário · TI", "Inicial: R$ 12.537,22", "Final de carreira: R$ 17.440,22") + card("Banca e prova", "FCC · 17/01/2027", "Belém, Marabá, Santarém e Macapá"), 5, T, minimal=True),
+ page_a('<h2><span class="c">TCE-GO</span> · fecha 06/11</h2>' + card("Cargo", "Técnico de Controle Externo · TI", "10 vagas · nível médio") + card("Remuneração", "Inicial: R$ 11.862,19", "Final de carreira: ainda não divulgado") + card("Banca e prova", "FCC · 17/01/2027", "Em Goiânia (GO)"), 6, T, minimal=True),
+ page_a('<h2><span class="c">TJ-PB</span> · fecha 18/11</h2>' + card("Cargo", "Analista Judiciário · TI", "20 vagas") + card("Remuneração", "Inicial: R$ 11.526,14", "Final de carreira: R$ 19.212,35") + card("Banca e prova", "FGV · 24/01/2027", "Na Paraíba"), 7, T, minimal=True),
+ page_a('<h2>Dá pra fazer <span class="v">mais de um</span>?</h2><p>Sim. CGU e SEFAZ SP caem no <b>mesmo dia (13/12)</b>, então ali é escolher um. Já TRT 8, TCE-GO e TJ-PB ficam em janeiro.</p><p class="sub">Aproveite que TRT-8 (PA e AP), TCE-GO e SEFAZ-SP são da mesma banca (FCC).</p>', 8, T, minimal=True),
+ page_a('<h2>Salva pra não perder os <span class="c">prazos</span>.</h2><p>E manda pra aquele amigo de TI que vive dizendo que um dia vai estudar pra concurso.</p>' + seguir(), 9, T, minimal=True),
 ]
 
 # 2 — 22/10 10h · B: o que do seu dia a dia já cai na CGU
