@@ -66,13 +66,14 @@ POSTS["23-18h"] = [page_a(badge() + '<h1>Qual concurso de <span class="c">TI</sp
     '<div class="sub">CGU, SEFAZ SP, TRT 8, TCE-GO, TJ-PB ou outro? Me conta nos comentários 👇</div>', photo="fotos/ludy-notebook.jpg")]
 
 # 6 — 24/10 18h · A: calendário de provas
-T = 5
+T = 6
 POSTS["24-18h"] = [
  page_a(badge() + '<h1>Calendário de provas de <span class="c">TI</span>: <span class="v">dez/26 e jan/27</span></h1><div class="sub">Salva pra montar seu planejamento →</div>', 1, T, photo="fotos/ampulheta-1.jpg"),
- page_a('<h2><span class="c">13/12/2026</span> · domingo</h2>' + card("CGU", "Cebraspe · 27 capitais", "Inicial: R$ 20.000,00") + card("SEFAZ SP", "FCC · São Paulo (SP)", "Inicial: R$ 11.359,50") + '<p class="sub">⚠️ Mesmo dia: escolha um dos dois.</p>', 2, T),
- page_a('<h2><span class="c">17/01/2027</span> · domingo</h2>' + card("TRT 8", "FCC · Belém, Marabá, Santarém e Macapá", "Analista: R$ 18.801,39 · Técnico: R$ 12.537,22") + card("TCE-GO", "FCC · Goiânia (GO)", "Técnico (nível médio): R$ 11.862,19") + '<p class="sub">⚠️ Mesmo dia também.</p>', 3, T),
- page_a('<h2><span class="c">24/01/2027</span> · domingo</h2>' + card("TJ-PB", "FGV · Paraíba", "Analista: R$ 11.526,14 inicial · R$ 19.212,35 final") + '<p class="sub">Dá pra encaixar depois da prova de 17/01.</p>', 4, T),
- page_a('<h2>Com <span class="v">8 semanas</span> até a primeira prova, cada semana conta.</h2><p>Salva e manda pra quem vai estudar com você.</p>' + seguir(), 5, T),
+ page_a('<h2><span class="c">13/12/2026</span> · domingo</h2>' + card("CGU", "Cebraspe · 27 capitais", "Inicial: R$ 20.000,00") + '<p class="sub">Uma semana depois tem SEFAZ SP: dá pra fazer as duas.</p>', 2, T),
+ page_a('<h2><span class="c">20/12/2026</span> · domingo</h2>' + card("SEFAZ SP", "FCC · São Paulo (SP)", "Inicial: R$ 11.359,50") + '<p class="sub">⚠️ A data mudou: antes era 13/12.</p>', 3, T),
+ page_a('<h2><span class="c">17/01/2027</span> · domingo</h2>' + card("TRT 8", "FCC · Belém, Marabá, Santarém e Macapá", "Analista: R$ 18.801,39 · Técnico: R$ 12.537,22") + card("TCE-GO", "FCC · Goiânia (GO)", "Técnico (nível médio): R$ 11.862,19") + '<p class="sub">⚠️ Mesmo dia: escolha um dos dois.</p>', 4, T),
+ page_a('<h2><span class="c">24/01/2027</span> · domingo</h2>' + card("TJ-PB", "FGV · Paraíba", "Analista: R$ 11.526,14 inicial · R$ 19.212,35 final") + '<p class="sub">Dá pra encaixar depois da prova de 17/01.</p>', 5, T),
+ page_a('<h2>Com <span class="v">7 semanas</span> até a primeira prova, cada semana conta.</h2><p>Salva e manda pra quem vai estudar com você.</p>' + seguir(), 6, T),
 ]
 
 # 7 — 25/10 18h · imagem única: história
